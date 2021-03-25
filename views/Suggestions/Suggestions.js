@@ -45,7 +45,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/epicDecompositionCreateSuggestions",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/epicDecompositionCreateSuggestions",
                 crossDomain: true,
                 data: jsonOfIssueKey,
                 contentType: "application/json",
@@ -63,7 +63,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/storyOptimizationCreateSuggestions",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/storyOptimizationCreateSuggestions",
                 crossDomain: true,
                 data: jsonOfIssueKey,
                 contentType: "application/json",
@@ -86,7 +86,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/taskGenerationCreateSuggestions",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/taskGenerationCreateSuggestions",
                 crossDomain: true,
                 data: jsonOfIssueKey,
                 contentType: "application/json",
@@ -214,7 +214,7 @@ function createSelectedSuggestions() {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/epicDecompositionCreateIssues",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/epicDecompositionCreateIssues",
                 crossDomain: true,
                 data: JSON.stringify(suggestionsToSend),
                 contentType: "application/json",
@@ -228,7 +228,7 @@ function createSelectedSuggestions() {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/storyOptimizationCreateIssues",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/storyOptimizationCreateIssues",
                 crossDomain: true,
                 data: JSON.stringify(suggestionsToSend),
                 contentType: "application/json",
@@ -242,7 +242,7 @@ function createSelectedSuggestions() {
 
             $.ajax({
                 type: "POST",
-                url: "https://ai4agileaibackend.azurewebsites.net/taskGenerationCreateIssues",
+                url: "https://ai4agileaibackendproduction.azurewebsites.net/taskGenerationCreateIssues",
                 crossDomain: true,
                 data: JSON.stringify(suggestionsToSend),
                 contentType: "application/json",
