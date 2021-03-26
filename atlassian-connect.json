@@ -2,7 +2,7 @@
   "key": "AI4Agile",
   "name": "AI4Agile",
   "description": "AI4Agile - AI-powered Plugin to Accelerate Agile Development",
-  "baseUrl": "http://ai4agilejiracloudappproduction.azurewebsites.net",
+  "baseUrl": "https://ai4agilejiracloudappproduction.azurewebsites.net",
   "vendor": {
          "name": "Team Katara of Washington State University Everett",
          "url": "https://school.eecs.wsu.edu/academics/undergraduate-program/software-engineering/everett/"
