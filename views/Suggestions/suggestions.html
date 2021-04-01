@@ -11,27 +11,39 @@
 </head>
 
 <body>
-  <div class="aui-buttons button_margin" class="buttons">
-    <button class="aui-button aui-button-compact" id="loadSuggestions" onClick="getsuggestions()">Reload Suggestions</button>
-  </div>
-
-  <div id="range" class='slidecontainer'>
-    <script>
-      $(window).on('load',function(){
-        populateRange();
-      })
-    </script>
+  <div id="inline">
+    <div id="range" class='slidecontainer'>
+      <script>
+        $(window).on('load',function(){
+          populateRange();
+        })
+      </script>
+    </div>
+  
+    <div class="aui-buttons button_margin" class="buttons">
+      <button class="aui-button aui-button" id="loadSuggestions" onClick="getsuggestions()">
+        Reload Suggestions
+      </button>
+    </div>
   </div>
 
   <div style="display:inline; float:right;" class='tooltip'>
     <button class="aui-button button_Right aui-button-primary button_margin" id="createSelected"
-      onClick="createSelectedSuggestions()">Create Selected</button>
-      <span class="tooltiptext">Refresh browser to see results</span>
+      onClick="createSelectedSuggestions()">
+      Create Selected
+    </button>
+      <span class="tooltiptext">
+        Refresh browser to see results
+      </span>
   </div>
 
   <div class="aui-buttons button_margin" class="buttons">
-    <button class="aui-button" id="selectAll" onClick="selectAll()" disabled="true">Select All</button>
-    <button class="aui-button" id="deselectAll" onClick="deselectAll()" disabled="true">Deselect All</button>
+    <button class="aui-button" id="selectAll" onClick="selectAll()" disabled="true">
+      Select All
+    </button>
+    <button class="aui-button" id="deselectAll" onClick="deselectAll()" disabled="true">
+      Deselect All
+    </button>
   </div>
 
   <div class="suggestions" id="suggestions">
