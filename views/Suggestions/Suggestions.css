@@ -1,13 +1,13 @@
 #suggestions {
-    word-wrap:break-word;
+  word-wrap:break-word;
 }
 
 .buttons {
-    display:inline;
+  display:inline;
 }
 
 .button_Right {
-    float:right;
+  float:right;
 }
 
 .button_margin {
@@ -23,10 +23,18 @@
   margin-right: 5px;
 }
 
+.section {
+  display: inline-block;
+}
+
+.select-deselect-text {
+  font-style: italic;
+}
+
 .slider {
     /*-webkit-appearance: none;  /* Override default CSS styles */
     /*appearance: none;*/
-    width: 90%; /* Full-width */
+    width: 95%; /* Full-width */
     height: 10px; /* Specified height */
     background: #d3d3d3; /* Grey background */
     outline: none; /* Remove outline */
@@ -36,7 +44,7 @@
   }
 
 .slidecontainer {
-    width: 95%; /* Width of the outside container */
+    width: 100%; /* Width of the outside container */
     text-align:center
   }
 
@@ -86,11 +94,13 @@
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 130px;
-  background-color: #DFE1E6;
+  background-color: #FFFFFF;
+  border-color: #000000;
   color: rgb(0, 0, 0);
   text-align: center;
   border-radius: 3px;
   padding: 3px 0;
+  
   
   /* Position the tooltip */
   position: absolute;
