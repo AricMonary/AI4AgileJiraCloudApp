@@ -11,42 +11,37 @@
 </head>
 
 <body>
-  <div id="inline">
-    <div id="range" class='slidecontainer'>
-      <script>
-        $(window).on('load',function(){
-          populateRange();
-        })
-      </script>
-    </div>
-  
-    <div class="aui-buttons button_margin" class="buttons">
-      <button class="aui-button aui-button" id="loadSuggestions" onClick="getsuggestions()">
-        Reload Suggestions
-      </button>
-    </div>
+
+  <div id="range" class='slidecontainer'>
+    <script>
+      $(window).on('load',function(){
+        populateRange();
+      })
+    </script>
   </div>
 
-  <div style="display:inline; float:right;" class='tooltip'>
-    <button class="aui-button button_Right aui-button-primary button_margin" id="createSelected"
-      onClick="createSelectedSuggestions()">
-      Create Selected
+  <div class="aui-buttons button_Right button_margin section">
+    <button class="aui-button">
+      <span class="aui-icon aui-icon-small aui-iconfont-refresh" id="loadSuggestions" onClick="getsuggestions()">
+        Reload Suggestions
+      </span>
     </button>
+    <div class="tooltip">
+      <button class="aui-button aui-button-primary" id="createSelected" onClick="createSelectedSuggestions()">
+        Create Selected
+      </button>
       <span class="tooltiptext">
         Refresh browser to see results
       </span>
+    </div>
   </div>
 
-  <div class="aui-buttons button_margin" class="buttons">
-    <button class="aui-button" id="selectAll" onClick="selectAll()" disabled="true">
-      Select All
-    </button>
-    <button class="aui-button" id="deselectAll" onClick="deselectAll()" disabled="true">
-      Deselect All
-    </button>
-  </div>
+  <div class="suggestions section" id="suggestions" onchange="checkForSelectDeselect()">
+    <div>
+      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
+      <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
+    </div>
 
-  <div class="suggestions" id="suggestions">
     <script>
       $(window).on('load',function(){
         getsuggestions();
