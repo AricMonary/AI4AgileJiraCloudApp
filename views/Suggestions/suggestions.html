@@ -19,36 +19,37 @@
       })
     </script>
   </div>
-<div class="buttons">
-  <div class="section">
-    <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
-    <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
-  </div>
 
-  <div class="aui-buttons Right button_margin section">
-    <button class="aui-button Left aui-button-subtle">
-      <span class="aui-icon aui-icon-small aui-iconfont-question-circle" id="openDocumentation" onClick="openDocumentation()">
-        Open Documentation
-      </span>
-    </button>
-    <button class="aui-button">
-      <span class="aui-icon aui-icon-small aui-iconfont-refresh" id="loadSuggestions" onClick="getsuggestions()">
-        Reload Suggestions
-      </span>
-    </button>
-    <div class="tooltip">
-      <button class="aui-button aui-button-primary" id="createSelected" onClick="createSelectedSuggestions()">
-        Create Selected
+  <div class="buttons">
+    <div class="section selectAllMargin">
+      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
+      <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
+    </div>
+
+    <div class="aui-buttons Right button_margin section">
+      <button class="aui-button aui-button-subtle">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-circle" id="openDocumentation" onClick="openDocumentation()">
+          Open Documentation
+        </span>
       </button>
-      <span class="tooltiptext">
-        Refresh browser to see results
-      </span>
+      <button class="aui-button">
+        <span class="aui-icon aui-icon-small aui-iconfont-refresh" id="loadSuggestions" onClick="getsuggestions()">
+          Reload Suggestions
+        </span>
+      </button>
+      <div class="tooltip">
+        <button class="aui-button aui-button-primary" id="createSelected" onClick="createSelectedSuggestions()">
+          Create Selected
+        </button>
+        <span class="tooltiptext">
+          Refresh browser to see results
+        </span>
+      </div>
     </div>
   </div>
-</div>
   
 
-  <div class="suggestions Left" id="suggestions" onchange="checkForSelectDeselect()">
+  <div class="suggestions" id="suggestions" onchange="checkForSelectDeselect()">
 
     <script>
       $(window).on('load',function(){

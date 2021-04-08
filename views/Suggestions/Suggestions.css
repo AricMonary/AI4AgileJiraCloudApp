@@ -3,19 +3,31 @@
 }
 
 .buttons {
-  display:inline;
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  text-align:center;
 }
 
 .Right {
-  float:right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .Left {
-  float:left;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .button_margin {
   margin: 5px;
+}
+
+.selectAllMargin {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .checkbox_margin {
@@ -29,12 +41,13 @@
 
 .section {
   display: inline-block;
-  vertical-align:bottom;
 }
 
 .select-deselect-text {
   font-style: italic;
 }
+
+
 
 .slider {
     /*-webkit-appearance: none;  /* Override default CSS styles */
