@@ -20,10 +20,10 @@ Clicking on an issue will open the issue view panel. If an Epic (purple icon) ha
 [Video Demonstration](https://youtu.be/05zN1Hv9UkM)  
 
 ## Feature-Specific Help
-[Epic Decomposition](url)  
-[Story Optimization](url)  
-[Task Generation](url)  
-[Dependency Visualization](url)  
+[Epic Decomposition](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/epic-decomposition.html)  
+[Story Optimization](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/story-optimization.html)  
+[Task Generation](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/task-generation.html)  
+[Dependency Visualization](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/dependency-visualization.html)  
 
 For any further questions or problems, please let us know via Issues on GitHub.  
 
