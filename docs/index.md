@@ -40,7 +40,7 @@ This project is part of the [ICSE Score 2021 Competition.](https://conf.research
 
 
 # Image Links TEMP
-![Image of SB1 Fig 1](https://github.com/AricMonary/AI4Agile/blob/d6a8e821abed0d321691eb17c1ffbb3ab2917f53/Documentation/SCORE-report/Latex%20files/figure/Scenario1Figure1.png)
+![Image of SB1 Fig 1](Documentation/SCORE-report/Latex files/figure/Scenario1Figure1.png)
 ![Image of SB1 Fig 2](https://github.com/AricMonary/AI4Agile/blob/d6a8e821abed0d321691eb17c1ffbb3ab2917f53/Documentation/SCORE-report/Latex%20files/figure/Scenario1Figure2.png)
 ![Image of SB1 Fig 3](https://github.com/AricMonary/AI4Agile/blob/d6a8e821abed0d321691eb17c1ffbb3ab2917f53/Documentation/SCORE-report/Latex%20files/figure/Scenario1Figure3.png)
 ![Image of SB1 Fig 4](https://github.com/AricMonary/AI4Agile/blob/d6a8e821abed0d321691eb17c1ffbb3ab2917f53/Documentation/SCORE-report/Latex%20files/figure/Scenario1Figure4.png)
