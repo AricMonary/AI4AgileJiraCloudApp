@@ -20,7 +20,25 @@
     </script>
   </div>
 
-  <div class="aui-buttons button_Right button_margin section">
+  <div class="suggestions Left section" id="suggestions" onchange="checkForSelectDeselect()">
+    <div>
+      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
+      <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
+    </div>
+
+    <script>
+      $(window).on('load',function(){
+        getsuggestions();
+      })
+    </script>
+  </div>
+
+  <div class="aui-buttons Right button_margin section">
+    <button class="aui-button Left aui-button-subtle">
+      <span class="aui-icon aui-icon-small aui-iconfont-question-circle" id="openDocumentation" onClick="openDocumentation()">
+        Open Documentation
+      </span>
+    </button>
     <button class="aui-button">
       <span class="aui-icon aui-icon-small aui-iconfont-refresh" id="loadSuggestions" onClick="getsuggestions()">
         Reload Suggestions
@@ -34,19 +52,6 @@
         Refresh browser to see results
       </span>
     </div>
-  </div>
-
-  <div class="suggestions section" id="suggestions" onchange="checkForSelectDeselect()">
-    <div>
-      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
-      <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
-    </div>
-
-    <script>
-      $(window).on('load',function(){
-        getsuggestions();
-      })
-    </script>
   </div>
 </body>
 

@@ -389,3 +389,23 @@ function clearSuggestions() {
         suggestionDeleted(populatedSuggestions[i]);
     }
 }
+
+var documentationLinkBase = 'https://aricmonary.github.io/AI4AgileJiraCloudApp/help/';
+
+function openDocumentation() {
+    var processType = getURLParameters()['processType'];
+    var documentationPageToOpen;
+    switch(processType) {
+        case 'epicDecomposition':
+            documentationPageToOpen = documentationLinkBase + 'epic-decomposition' + '.html';
+            break;
+        case 'storyOptimization':
+            documentationPageToOpen = documentationLinkBase + 'story-optimization' + '.html';
+            break;
+        case 'taskGeneration':
+            documentationPageToOpen = documentationLinkBase + 'task-generation' + '.html';
+            break;
+    }
+    
+    window.open(documentationPageToOpen,'_blank');
+}

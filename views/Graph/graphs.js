@@ -93,3 +93,28 @@ function removeLoader() {
     var loading = document.getElementById('loading');
     loading.parentNode.removeChild(loading);
 }
+
+function getURLParameters() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    var parameterSet = {};
+    parameterSet['projectKey'] = urlParams.get('projectKey');
+    parameterSet['parentIssueKey'] = urlParams.get('parentIssueKey');
+    parameterSet['processType'] = urlParams.get('processType');
+
+    return parameterSet;
+}
+
+var documentationLinkBase = 'https://aricmonary.github.io/AI4AgileJiraCloudApp/help/';
+
+function openDocumentation() {
+    var processType = getURLParameters()['processType'];
+    var documentationPageToOpen;
+    switch(processType) {
+        case 'graph':
+            documentationPageToOpen = documentationLinkBase + 'dependency-visualization' + '.html';
+            break;
+    }
+    
+    window.open(documentationPageToOpen,'_blank');
+}

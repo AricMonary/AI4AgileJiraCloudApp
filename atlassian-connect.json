@@ -113,7 +113,7 @@
         },
         "target": {
           "type": "web_panel",
-          "url": "/views/Graph/graph.html?projectKey={project.key}&parentIssueKey={issue.key}"
+          "url": "/views/Graph/graph.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=graph"
         },
         "tooltip": {
           "value": "Dependency Visualization"
