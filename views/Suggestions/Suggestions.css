@@ -29,6 +29,7 @@
 
 .section {
   display: inline-block;
+  vertical-align:bottom;
 }
 
 .select-deselect-text {
