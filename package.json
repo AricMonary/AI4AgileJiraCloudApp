@@ -17,9 +17,7 @@
     "watch-jsx": "concurrently 'npm:watch-jsx-browser' 'npm:watch-jsx-node'",
     "watch": "concurrently -i 'npm:watch-server' 'npm:watch-jsx-browser' 'npm:watch-jsx-node'",
     "lint": "eslint app.js routes",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
-  "type": "module",
   "dependencies": {
     "@atlaskit/button": "^15.1.3",
     "@atlaskit/checkbox": "^11.0.8",
