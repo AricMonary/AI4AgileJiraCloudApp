@@ -39,7 +39,7 @@ function getsuggestions() {
 function generateSuggestions(processType, issueKey, sliderValue) {
     var jsonOfIssueKey = JSON.stringify({ 'issueKey': issueKey, 'sliderValue': sliderValue });
 
-    //insertLoader();
+    insertLoader();
 
     switch (processType) {
         //for the epic decomposition process
