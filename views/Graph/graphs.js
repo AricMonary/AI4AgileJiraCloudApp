@@ -109,12 +109,15 @@ var documentationLinkBase = 'https://aricmonary.github.io/AI4AgileJiraCloudApp/h
 
 function openDocumentation() {
     var processType = getURLParameters()['processType'];
-    var documentationPageToOpen;
+    var documentationPageToOpen = '';
     switch(processType) {
         case 'graph':
             documentationPageToOpen = documentationLinkBase + 'dependency-visualization' + '.html';
             break;
     }
     
-    window.open(documentationPageToOpen,'_blank');
+    if (documentationPageToOpen != '')
+    {
+        window.open(documentationPageToOpen,'_blank');
+    }
 }
