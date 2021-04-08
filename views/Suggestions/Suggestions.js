@@ -13,10 +13,14 @@ var suggestions = {
     }
 }
 
-function getsuggestions() {
+// Display Reload Suggestions tooltip after the slider value change
+var slider = document.getElementById("range");
+slider.onchange = function() {
+    getsuggestions()
+}
 
+function getsuggestions() {
     clearSuggestions();
-    changeButtonState(false);
 
     parametersFromURL = getURLParameters();
 
@@ -41,7 +45,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
         //for the epic decomposition process
         case 'epicDecomposition':
 
-            //console.log("Epic Decomposition Generate Suggestions: " + jsonOfIssueKey)
+            console.log("Epic Decomposition Generate Suggestions: " + jsonOfIssueKey)
 
             $.ajax({
                 type: "POST",
@@ -59,7 +63,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
         //for the story optimization process
         case 'storyOptimization':
 
-            //console.log("Story Optimization Generate Suggestions: " + jsonOfIssueKey)
+            console.log("Story Optimization Generate Suggestions: " + jsonOfIssueKey)
 
             $.ajax({
                 type: "POST",
@@ -82,7 +86,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
         //for the task generation process
         case 'taskGeneration':
 
-            //console.log("Task Generation Generate Suggestions: " + jsonOfIssueKey)
+            console.log("Task Generation Generate Suggestions: " + jsonOfIssueKey)
 
             $.ajax({
                 type: "POST",
@@ -118,7 +122,7 @@ function renderSuggestions() {
         checkbox.setAttribute('name', 'suggestion');
         //checkbox.setAttribute('checked', 'true');
         
-        console.log(suggestionsToRender)
+        //console.log(suggestionsToRender)
         if (suggestion == "No Story Optimization Possible" && suggestionsToRender.length == 1) {
             checkbox.disabled = true;
             label.setAttribute("contenteditable", "false");
@@ -130,9 +134,6 @@ function renderSuggestions() {
         newDiv.appendChild(document.createElement("br"));
         div.appendChild(newDiv);
     }
-
-    document.getElementById('selectAll').disabled = false;
-    document.getElementById('deselectAll').disabled = false;
 }
 
 // For demo button
@@ -160,24 +161,37 @@ function createSuggestions() {
         newDiv.appendChild(document.createElement("br"));
         div.appendChild(newDiv);
     }
-
-    document.getElementById('selectAll').disabled = false;
-    document.getElementById('deselectAll').disabled = false;
 }
 
-function checkAllSuggestions(checked) {
+// Select or deselect all check boxes
+function selectDeselectAll() {
+    var selectDeselectAllCheckBox = document.getElementsByName('selectDeselectAll');
+    var selectDeselectCheck = selectDeselectAllCheckBox[0].checked
+
     var checkboxes = document.getElementsByName('suggestion');
+
     for (checkbox of checkboxes) {
-        checkbox.checked = checked;
+        checkbox.checked = selectDeselectCheck;
     }
 }
 
-function selectAll() {
-    checkAllSuggestions(true);
-}
+// Update the select/deselect all check box depends on the check boxes
+function checkForSelectDeselect() {
+    var selectDeselectAllCheckBox = document.getElementsByName('selectDeselectAll')[0];
+    var checkboxes = document.getElementsByName('suggestion');
 
-function deselectAll() {
-    checkAllSuggestions(false);
+    var counter = 0;
+    for (checkbox of checkboxes) {
+        if (checkbox.checked) {
+            counter++;
+        }
+    }
+
+    if (counter == checkboxes.length) {
+        selectDeselectAllCheckBox.checked = true;
+    } else {
+        selectDeselectAllCheckBox.checked = false;
+    }
 }
 
 function createSelectedSuggestions() {
@@ -257,8 +271,6 @@ function createSelectedSuggestions() {
     }
 
     if (document.getElementById('suggestions').childElementCount == 0) {
-        document.getElementById('selectAll').disabled = true;
-        document.getElementById('deselectAll').disabled = true;
         document.getElementById('createSuggestions').disabled = false;
     }
     //CLOSE FIELD
@@ -376,9 +388,4 @@ function clearSuggestions() {
     for (i = populatedSuggestions.length - 1; i >= 0; i--) {
         suggestionDeleted(populatedSuggestions[i]);
     }
-}
-
-function changeButtonState(state) {
-    document.getElementById('selectAll').disabled = state;
-    document.getElementById('deselectAll').disabled = state;
 }
