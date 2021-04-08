@@ -39,7 +39,7 @@ function getsuggestions() {
 function generateSuggestions(processType, issueKey, sliderValue) {
     var jsonOfIssueKey = JSON.stringify({ 'issueKey': issueKey, 'sliderValue': sliderValue });
 
-    insertLoader();
+    //insertLoader();
 
     switch (processType) {
         //for the epic decomposition process
@@ -388,4 +388,24 @@ function clearSuggestions() {
     for (i = populatedSuggestions.length - 1; i >= 0; i--) {
         suggestionDeleted(populatedSuggestions[i]);
     }
+}
+
+var documentationLinkBase = 'https://aricmonary.github.io/AI4AgileJiraCloudApp/help/';
+
+function openDocumentation() {
+    var processType = getURLParameters()['processType'];
+    var documentationPageToOpen;
+    switch(processType) {
+        case 'epicDecomposition':
+            documentationPageToOpen = documentationLinkBase + 'epic-decomposition' + '.html';
+            break;
+        case 'storyOptimization':
+            documentationPageToOpen = documentationLinkBase + 'story-optimization' + '.html';
+            break;
+        case 'taskGeneration':
+            documentationPageToOpen = documentationLinkBase + 'task-generation' + '.html';
+            break;
+    }
+    
+    window.open(documentationPageToOpen,'_blank');
 }

@@ -6,8 +6,12 @@
   display:inline;
 }
 
-.button_Right {
+.Right {
   float:right;
+}
+
+.Left {
+  float:left;
 }
 
 .button_margin {
