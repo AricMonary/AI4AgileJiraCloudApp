@@ -19,8 +19,8 @@
       })
     </script>
   </div>
-
-  <div class="buttons">
+<div class="buttons">
+  <div class="section">
     <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
     <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
   </div>
@@ -45,8 +45,10 @@
       </span>
     </div>
   </div>
+</div>
+  
 
-  <div class="suggestions Left section" id="suggestions" onchange="checkForSelectDeselect()">
+  <div class="suggestions Left" id="suggestions" onchange="checkForSelectDeselect()">
 
     <script>
       $(window).on('load',function(){
