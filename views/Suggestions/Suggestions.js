@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+});
+
 var paramtersFromURL = {}
 
 var suggestionsCreated = false;
@@ -16,7 +19,7 @@ var suggestions = {
 // Display Reload Suggestions tooltip after the slider value change
 var slider = document.getElementById("range");
 slider.onchange = function() {
-    getsuggestions()
+    getsuggestions();
 }
 
 function getsuggestions() {
@@ -46,7 +49,7 @@ function generateSuggestions(processType, issueKey, sliderValue) {
         case 'epicDecomposition':
 
             console.log("Epic Decomposition Generate Suggestions: " + jsonOfIssueKey)
-            
+
             $.ajax({
                 type: "POST",
                 url: "http://127.0.0.1:5000/epicDecompositionCreateSuggestions",
@@ -103,6 +106,11 @@ function generateSuggestions(processType, issueKey, sliderValue) {
     }
 }
 
+function syncCheckboxes() {
+    updateSelectDeselectCheckboxWithResult();
+    enableDisableCreateSelectedButton();
+}
+
 function renderSuggestions() {
     removeLoader();
     var div = document.getElementById('suggestions');
@@ -110,6 +118,7 @@ function renderSuggestions() {
     for (suggestion of suggestionsToRender) {
         var newDiv = document.createElement("div");
         newDiv.setAttribute("class", "suggestion")
+
         // create the necessary elements
         var label = document.createElement("label");
         label.setAttribute("contenteditable", "true");
@@ -120,7 +129,7 @@ function renderSuggestions() {
         var checkbox = document.createElement("input");
         checkbox.setAttribute('type', 'checkbox');
         checkbox.setAttribute('name', 'suggestion');
-        //checkbox.setAttribute('checked', 'true');
+        checkbox.setAttribute("onChange", "syncCheckboxes()")
         
         //console.log(suggestionsToRender)
         if (suggestion == "No Story Optimization Possible" && suggestionsToRender.length == 1) {
@@ -132,6 +141,7 @@ function renderSuggestions() {
         newDiv.appendChild(checkbox);
         newDiv.appendChild(label);
         newDiv.appendChild(document.createElement("br"));
+    
         div.appendChild(newDiv);
     }
 }
@@ -164,7 +174,7 @@ function createSuggestions() {
 }
 
 // Select or deselect all check boxes
-function selectDeselectAll() {
+function selectDeselectAllCheckboxes() {
     var selectDeselectAllCheckBox = document.getElementsByName('selectDeselectAll');
     var selectDeselectCheck = selectDeselectAllCheckBox[0].checked
 
@@ -173,10 +183,27 @@ function selectDeselectAll() {
     for (checkbox of checkboxes) {
         checkbox.checked = selectDeselectCheck;
     }
+    syncCheckboxes();
+}
+
+function enableDisableCreateSelectedButton() {
+    var checkboxes = document.getElementsByName('suggestion');
+    var counter = 0;
+    for (checkbox of checkboxes) {
+        if (checkbox.checked) {
+            counter++;
+        }
+    }
+
+    if (counter > 0) {
+        document.getElementById("createSelected").disabled = false;
+    } else {
+        document.getElementById("createSelected").disabled = true;
+    }
 }
 
 // Update the select/deselect all check box depends on the check boxes
-function checkForSelectDeselect() {
+function updateSelectDeselectCheckboxWithResult() {
     var selectDeselectAllCheckBox = document.getElementsByName('selectDeselectAll')[0];
     var checkboxes = document.getElementsByName('suggestion');
 
@@ -273,6 +300,7 @@ function createSelectedSuggestions() {
     if (document.getElementById('suggestions').childElementCount == 0) {
         document.getElementById('createSuggestions').disabled = false;
     }
+
     //CLOSE FIELD
 }
 
