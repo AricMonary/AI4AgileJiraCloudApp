@@ -2,7 +2,7 @@
   "key": "AI4Agile",
   "name": "AI4Agile",
   "description": "AI4Agile - AI-powered Plugin to Accelerate Agile Development",
-  "baseUrl": "https://1f187fd19aa5.ngrok.io",
+  "baseUrl": "https://ai4agilejiracloudappproduction.azurewebsites.net",
   "vendor": {
          "name": "Team Katara of Washington State University Everett",
          "url": "https://school.eecs.wsu.edu/academics/undergraduate-program/software-engineering/everett/"
@@ -28,11 +28,11 @@
         "icon": {
           "width": 24,
           "height": 24,
-          "url": "Suggestions/icons/decomposition.png"
+          "url": "/views/Suggestions/icons/decomposition.png"
         },
         "target": {
           "type": "web_panel",
-          "url": "Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=epicDecomposition"
+          "url": "/views/Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=epicDecomposition"
         },
         "tooltip": {
           "value": "Epic Decomposition"
@@ -55,11 +55,11 @@
         "icon": {
           "width": 24,
           "height": 24,
-          "url": "Suggestions/icons/optimization.png"
+          "url": "/views/Suggestions/icons/optimization.png"
         },
         "target": {
           "type": "web_panel",
-          "url": "Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=storyOptimization"
+          "url": "/views/Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=storyOptimization"
         },
         "tooltip": {
           "value": "Story Optimization"
@@ -82,11 +82,11 @@
         "icon": {
           "width": 24,
           "height": 24,
-          "url": "Suggestions/icons/generation.png"
+          "url": "/views/Suggestions/icons/generation.png"
         },
         "target": {
           "type": "web_panel",
-          "url": "Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=taskGeneration"
+          "url": "/views/Suggestions/suggestions.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=taskGeneration"
         },
         "tooltip": {
           "value": "Task Generation"
@@ -109,11 +109,11 @@
         "icon": {
           "width": 24,
           "height": 24,
-          "url": "Graph/graph.jpg"
+          "url": "/views/Graph/graph.jpg"
         },
         "target": {
           "type": "web_panel",
-          "url": "Graph/graph.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=graph"
+          "url": "/views/Graph/graph.html?projectKey={project.key}&parentIssueKey={issue.key}&processType=graph"
         },
         "tooltip": {
           "value": "Dependency Visualization"
