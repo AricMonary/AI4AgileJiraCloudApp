@@ -12,3 +12,7 @@ The idea for the Task Generation process is to assist users in creating tasks fr
 ### Troubleshooting  
 - If the newly created tasks don't appear automatically after a short while, try refreshing the browser page.
 - It's possible for fragmented sentences to appear in the suggestions with certain sentence structures. If this happens, the tasks can be edited either during the creation process or after, in the individual issue panels.
+ 
+  
+ 
+ [Return to Overview](https://aricmonary.github.io/AI4AgileJiraCloudApp/)
