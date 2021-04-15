@@ -3,7 +3,6 @@
 The Story Optimization process seeks to aid users in further refining user stories down to a more manageable level from which to create highly related Tasks.  
 
 ### Getting Started  
-pictures, starting steps 
 1. Input a user story in a Jira Story's Description section, or use one from the output of the [Epic Decomposition](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/epic-decomposition.html) process.
 2. Click the `Story Optimization` button to open the panel.
 3. (optional) Adjust the connectivity threshold for your stories as desired with the `Degree of Connectivity` slider.
