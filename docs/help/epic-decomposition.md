@@ -15,3 +15,7 @@ Epic Decomposition seeks to assist with user story refinement by breaking Epics 
 - If the amount of outputted stories doesn't change with different slider values, the input text may be too short to make any difference.
 - Edits to issues won't be saved if you change the slider value or close the issue panel without creating those issues.
 - Changes to the Description text will require the refresh button (located next to `Create Selected`) to be used before those changes are seen in the generated stories.
+ 
+   
+   
+ [Return to Overview](https://aricmonary.github.io/AI4AgileJiraCloudApp/)
