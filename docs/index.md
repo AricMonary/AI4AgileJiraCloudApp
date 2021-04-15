@@ -17,7 +17,7 @@ Clicking on an issue will open the issue view panel. If an Epic (purple icon) ha
 ![Story button and panel positions](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/non-epic-processes-overview.png)  
 
 ### Video Demonstration
-[![Video Demonstration](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/videoPic.png)](https://youtu.be/05zN1Hv9UkM "AI4Agile Demo")  
+[![Video Demonstration](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/videoPic.jpg)](https://youtu.be/05zN1Hv9UkM "AI4Agile Demo")  
 
 ## Feature-Specific Help
 [Epic Decomposition](https://aricmonary.github.io/AI4AgileJiraCloudApp/help/epic-decomposition.html)  
