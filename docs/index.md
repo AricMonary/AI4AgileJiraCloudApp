@@ -14,11 +14,11 @@ AI4Agile leverages Artificial Intelligence to assist agile users of Atlassian's 
 - **Dependency Visualization**: generates a graph of explicit and implicit relationships between stories, tasks, and epics.
 
 ## General Usage
-Clicking on an issue will open the issue view panel. If an Epic (purple icon) has been selected, among the buttons below the `Title` field you'll see one for `Dependency Vizualization` and another for `Epic Decomposition.` The Dependency Vizualization tool is visible on all issue types. If a Story (green icon) is selected, the options will include `Story Optimization` and `Task Generation.` Using the decomposition, optimization, or generation tools will generate suggestions (`Suggestion Panel`) for stories or tasks that can be created.  
+Clicking on an issue will open the issue view panel. If an Epic (purple icon) has been selected, among the buttons below the `Title` field you'll see one for `Dependency Vizualization` and another for `Epic Decomposition.` The Dependency Vizualization tool is visible on all issue types. If a Story (green icon) is selected, the options will include `Story Optimization` and `Task Generation.` Using the decomposition, optimization, or generation tools will generate suggestions (`Suggestion Panel`) for stories or tasks that can be created. If a Task (blue icon) is selected, only the Dependency Visualization tool will be available from this app's features.   
 ### Buttons available on an Epic issue type
-![Epic button positions](https://github.com/AricMonary/AI4AgileJiraCloudApp/blob/b09fd1a5cc952fe6c179cfd048239cdf4ca8733f/docs/epic-decomp-overview.png)  
+![Epic button positions](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/epic-decomp-overview.png)  
 ### Buttons and panels available on a Story issue type
-![Story button and panel positions](https://github.com/AricMonary/AI4AgileJiraCloudApp/blob/b09fd1a5cc952fe6c179cfd048239cdf4ca8733f/docs/non-epic-processes-overview.png)  
+![Story button and panel positions](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/non-epic-processes-overview.png)  
 
 [Video Demonstration](https://youtu.be/05zN1Hv9UkM)  
 
