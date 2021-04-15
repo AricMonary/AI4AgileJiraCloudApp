@@ -22,7 +22,7 @@
 
   <div class="buttons">
     <div class="section selectAllMargin">
-      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAll()">
+      <input type="checkbox" id="selectDeselectAll" name="selectDeselectAll" onClick="selectDeselectAllCheckboxes()">
       <label for="selectDeselectAll" class="select-deselect-text">Select/Deselect All</label>
     </div>
 
@@ -38,7 +38,7 @@
         </span>
       </button>
       <div class="tooltip">
-        <button class="aui-button aui-button-primary" id="createSelected" onClick="createSelectedSuggestions()">
+        <button class="aui-button aui-button-primary" disabled="true" id="createSelected" onClick="createSelectedSuggestions()">
           Create Selected
         </button>
         <span class="tooltiptext">
@@ -49,7 +49,7 @@
   </div>
   
 
-  <div class="suggestions" id="suggestions" onchange="checkForSelectDeselect()">
+  <div class="suggestions" id="suggestions"">
 
     <script>
       $(window).on('load',function(){
