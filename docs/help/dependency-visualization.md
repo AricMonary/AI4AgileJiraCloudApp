@@ -12,3 +12,7 @@ The Dependency Visualization feature serves as way to view implicit (e.g. blocki
 
 ### Troubleshooting  
 Due to certain limitations of Jira, this feature will work optimally in situations where the text processing features of the tool have already been used, so that blocking relationships are made clear in ways that can be extracted with API queries. For this reason, some Epic graphs may not be what you'd expect, e.g. showing only the current issue but no children that are under them. To remedy this, you can add the relationships from Jira's `Link issues` button from the issue panel, then hide and reopen the Dependency Visualization panel once you're done, from the upper righthandside options menu (hide) and then the button used to open the panel in the first place.
+ 
+  
+ 
+ [Return to Overview](https://aricmonary.github.io/AI4AgileJiraCloudApp/)
