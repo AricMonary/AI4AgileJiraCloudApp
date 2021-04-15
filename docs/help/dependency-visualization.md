@@ -4,7 +4,12 @@ The Dependency Visualization feature serves as way to view implicit (e.g. blocki
 
 ### Getting Started  
 The Dependency Visualization feature includes two separate graphs. The Issue Tree will show any available parent, child, or otherwise blocking/blocked issues if they are listed in the linked issues or parent field in the Jira issue information. The Developer Cluster graph shows issues grouped in different clusters based on which developer they've been assigned to. Unassigned issues will be shown connected to an **N** node, to represent nobody has been assigned for those. Switching back and forth between the graphs is done via the button in the upper left corner of the graph, which will show either `View Developer Cluster` or `View Issue Tree` depending on which graph you are currently viewing.
- 
+  
+#### Issue Tree example
+![Issue Tree graph](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/help/issueTree.jpg)
+#### Developer Cluster example
+![Developer Cluster graph](https://raw.githubusercontent.com/AricMonary/AI4AgileJiraCloudApp/Website/docs/help/devCluster.jpg)
+
 #### Ways to interact with the graphs  
 - Zoom: using mousewheel, touchpad, or the zoom buttons in the bottom left corner, you can zoom in and out.
 - Pan: click and drag to move around the graph. Clicking on an issue node will move that node instead of the graph view.
