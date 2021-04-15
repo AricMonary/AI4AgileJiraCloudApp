@@ -16,9 +16,9 @@ AI4Agile leverages Artificial Intelligence to assist agile users of Atlassian's 
 ## General Usage
 Clicking on an issue will open the issue view panel. If an Epic (purple icon) has been selected, among the buttons below the `Title` field you'll see one for `Dependency Vizualization` and another for `Epic Decomposition.` The Dependency Vizualization tool is visible on all issue types. If a Story (green icon) is selected, the options will include `Story Optimization` and `Task Generation.` Using the decomposition, optimization, or generation tools will generate suggestions (`Suggestion Panel`) for stories or tasks that can be created.  
 ### Buttons available on an Epic issue type
-![Epic button positions](../docs/epic-decomp-overview.png)  
+![Epic button positions]({{ site.baseurl }}/docs/epic-decomp-overview.png)  
 ### Buttons and panels available on a Story issue type
-![Story button and panel positions](../docs/non-epic-processes-overview.png)  
+![Story button and panel positions]({{ site.baseurl }}/docs/non-epic-processes-overview.png)  
 
 [Video Demonstration](https://youtu.be/05zN1Hv9UkM)  
 
