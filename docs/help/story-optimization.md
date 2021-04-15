@@ -14,3 +14,7 @@ pictures, starting steps
 ### Troubleshooting  
 - If the new issues don't show up, try refreshing the browser page.
 - If the suggested stories don't change with different slider values, the current story may not have significant enough variation to split upon.
+ 
+  
+ 
+ [Return to Overview](https://aricmonary.github.io/AI4AgileJiraCloudApp/)
