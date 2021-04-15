@@ -1,7 +1,3 @@
-[Jekyll](https://jekyllrb.com/)  
-[GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)  
-[documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact)  
-
 ## Overview
 AI4Agile leverages Artificial Intelligence to assist agile users of Atlassian's Jira in refining user stories. Jira is a work management tool and issue tracker that can be used by agile or non-agile developers.
 
